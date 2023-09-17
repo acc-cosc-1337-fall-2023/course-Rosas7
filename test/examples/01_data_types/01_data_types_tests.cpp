@@ -1,5 +1,7 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
+#include "int.h" // i have access to the echo_variable function in my library
+#include "decimals.h"
 #include "char.h"
 #include "char.cpp"
 
@@ -8,11 +10,24 @@ TEST_CASE("Verify Test Configuration", "verification") {
 }
 
 /*test case echo_variable */
+//TEST_CASE("Test echo_variable function", "function should return the same value as the function argument")
+//{
+	//REQUIRE(5 == echo_variable(5));
+	//REQUIRE(50 == echo_variable(50));
+	//REQUIRE(500 == echo_variable(500));
+//}
 
 /*test case add_to_double_1 with 0 as parameter*/
+TEST_CASE("Test the add to double 1 function", "testing the decimal inconsistencies")
+ {
+	//REQUIRE(.9== add_to_double_1(0));
+ }
 
 /*test case add_to_double_1 with 1 as parameter*/
-
+TEST_CASE("Test the add to double 2 function", "testing the decimal inconsistencies")
+ {
+	REQUIRE(1.5== add_to_double_2(0));
+ }
 /*test case add_to_double_2 with 0 as parameter*/
 
 /*test case add_to_double_2 with 1 as parameter*/
@@ -65,4 +80,8 @@ TEST_CASE("Test a use case for boolean operators", "negate a result")
 	REQUIRE(is_letter_a_consonant('z') == true);
 }
 
-TEST_CASE("Test ")
+TEST_CASE("Test a is number in range", "using OR")
+{
+	REQUIRE(is_number_not_in_range(0, 1, 10) == true);
+	REQUIRE(is_number_not_in_range(5, 1, 10) == false);
+}
