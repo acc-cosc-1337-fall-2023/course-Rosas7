@@ -12,9 +12,9 @@ int get_char_ascii_value(char ch)
     return ch;
 }
 
-bool get_and_result(int num1, int num2)
+bool get_and_result(bool bool1, bool bool2)
 {
-    bool result = num1 ==3 && num2 == 5;
+    bool result = bool1 && bool2;
 
     return result;
 }

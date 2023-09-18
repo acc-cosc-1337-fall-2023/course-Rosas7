@@ -3,7 +3,6 @@
 #include "int.h" // i have access to the echo_variable function in my library
 #include "decimals.h"
 #include "char.h"
-#include "char.cpp"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
@@ -42,15 +41,16 @@ TEST_CASE("Test the get_char ascii value function", "char to int conversion ")
 }
 
 
+
 /*test case string test ASCII values Joe characters are equal to 74, 111, and 101*/
 
 /**Test boolean operators*/
 TEST_CASE("Test the and operator truth table", "only T T returns T")
 {
-	REQUIRE(get_and_result(3, 5) == true);
-	REQUIRE(get_and_result(5, 3) == false);
-	REQUIRE(get_and_result(3, 1) == false);
-	REQUIRE(get_and_result(1, 5) == false);
+	REQUIRE(get_and_result(true, true) == true);
+	REQUIRE(get_and_result(true, false) == false);
+	REQUIRE(get_and_result(false, true) == false);
+	REQUIRE(get_and_result(false, false) == false);
 }
 
 TEST_CASE("Test the or operator truth table", "only F F returns F")
@@ -71,7 +71,6 @@ TEST_CASE("Test the boolean operators order of precedence", "order of operations
 {
 	REQUIRE(get_order_of_precedence_result(true, true, true) == true);
 	REQUIRE(get_order_of_precedence_result(true, true, false) == false);
-
 }
 
 TEST_CASE("Test a use case for boolean operators", "negate a result")
