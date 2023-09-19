@@ -2,6 +2,7 @@
 #include "catch.hpp"
 #include "casting.h"
 #include "data_type_size.h"
+#include "constants.h"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
@@ -18,7 +19,7 @@ TEST_CASE("Test convert double to int", "truncate the decimal portion")
 	REQUIRE(convert_double_to_int(10.987087678) ==10);
 }
 
-TEST_CASE("Test int is 4 bytes w sideof")
+TEST_CASE("Test int is 4 bytes w size of")
 {
 	REQUIRE(get_int_data_size(4) == 4);
 	REQUIRE(get_int_data_size(10) == 4);
@@ -37,5 +38,13 @@ TEST_CASE("Test char is 1 byte w size of")
 	REQUIRE(get_char_size('A') ==1);
 	REQUIRE(get_char_size('9') ==1);
 	REQUIRE(get_char_size('#') ==1);
+
+}
+
+TEST_CASE("Test area with constants-get area of circle")
+{
+	REQUIRE(get_area_of_circle(10) == 314.159);
+	//REQUIRE(get_area_of_circle() ==);
+	//REQUIRE(get_area_of_circle() ==);
 
 }
