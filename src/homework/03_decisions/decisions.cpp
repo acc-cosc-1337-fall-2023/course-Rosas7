@@ -37,24 +37,25 @@ string get_letter_grade_using_if(int grade)
 
 string get_letter_grade_using_switch(int grade)
 {
-    auto tempgrade = grade/10;
-    switch(tempgrade)
+    string result;
+
+    switch(grade/10)
     {
     case 10:
     case 9:
-        cout<<"A";
+        result = "A";
         break;
     case 8:
-        cout<<"B";
+        result = "B";
         break;
     case 7:
-        cout<<"C";
+        result = "C";
         break;
     case 6:
-        cout<<"D";
+        result = "D";
         break;
     default:
-        cout<<"F";
+        result = "F";
     }
-    return 0;
+    return result;
 }

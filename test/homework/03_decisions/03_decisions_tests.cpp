@@ -6,7 +6,7 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
-TEST_CASE("Test the if else to get grade")
+TEST_CASE("Test the if else to get grade letter")
 {
 	REQUIRE(get_letter_grade_using_if(95) == "A");
 	REQUIRE(get_letter_grade_using_if(85) =="B");
@@ -15,7 +15,7 @@ TEST_CASE("Test the if else to get grade")
 	REQUIRE(get_letter_grade_using_if(50) =="F");
 }
 
-TEST_CASE("Test the switch function to get grade")
+TEST_CASE("Test the switch function to get grade letter")
 {
 	REQUIRE(get_letter_grade_using_switch(95) == "A");
 	REQUIRE(get_letter_grade_using_switch(85) =="B");
